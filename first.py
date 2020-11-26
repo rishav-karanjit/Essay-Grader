@@ -10,7 +10,7 @@
 from PyQt5 import QtWidgets, uic
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from second import Ui_otherWindow
+from details import DetailsUI
 
 from third import Ui_otherWindow2
 
@@ -22,11 +22,8 @@ from fifth import Ui_otherWindow5
 class Ui_MainWindow(object):
     
     def openwindow(self):
-        self.window=QtWidgets.QMainWindow()
-        self.ui=Ui_otherWindow()
-        self.ui.setupUi(self.window)
+        self.window=DetailsUI()
         self.window.show()
-        
        
     def openwindow2(self):
         self.window=QtWidgets.QMainWindow()
