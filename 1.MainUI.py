@@ -121,7 +121,7 @@ class Ui_MainWindow(object):
 
     def SaveEssay(self):     
         Essay = self.plainTextEdit.toPlainText()
-        with open('essay.txt', 'w') as f:
+        with open('./Backend/essay.txt', 'w') as f:
             f.write(Essay)        
 
     def retranslateUi(self, MainWindow):
