@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>771</width>
-    <height>597</height>
+    <width>811</width>
+    <height>611</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -143,8 +143,8 @@ QPlainTextEdit{
      <rect>
       <x>10</x>
       <y>150</y>
-      <width>401</width>
-      <height>361</height>
+      <width>591</width>
+      <height>391</height>
      </rect>
     </property>
     <property name="plainText">

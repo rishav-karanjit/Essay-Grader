@@ -105,7 +105,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Number ofParagraph</string>
+     <string>Number of Paragraph</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
