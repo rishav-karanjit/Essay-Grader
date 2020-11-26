@@ -13,9 +13,11 @@ class Mistakes(QtWidgets.QMainWindow):
 
         f = open("backend/grammer_mistake.txt", "r")
         self.gmistake_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'gmistake')
+        self.gmistake_textedit.setReadOnly(True)
         self.gmistake_textedit.insertPlainText(f.read())
 
         f = open("backend/essay.txt", "r")
         self.essay_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'essay')
+        self.essay_textedit.setReadOnly(True)
         self.essay_textedit.insertPlainText(f.read())
         
