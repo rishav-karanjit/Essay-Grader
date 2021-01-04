@@ -40,7 +40,6 @@ class WordDetails():
             if w not in stop_words:  
                 filtered_sentence.append(w)  
         freq = nltk.FreqDist(filtered_sentence)
-        print(freq.most_common(5))
         word = ""
         for i in freq.most_common(5):
             word += i[0]
