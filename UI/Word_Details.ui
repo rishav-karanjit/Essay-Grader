@@ -62,7 +62,7 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>10</pointsize>
+          <pointsize>12</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -74,8 +74,15 @@
       </item>
       <item>
        <widget class="QLabel" name="No_of_chars">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
-         <string> </string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -96,7 +103,7 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>10</pointsize>
+          <pointsize>12</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -108,6 +115,13 @@
       </item>
       <item>
        <widget class="QLabel" name="No_of_words">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -130,7 +144,7 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>10</pointsize>
+          <pointsize>12</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -142,6 +156,13 @@
       </item>
       <item>
        <widget class="QLabel" name="No_of_paragraph">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -164,18 +185,25 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>10</pointsize>
+          <pointsize>12</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
         <property name="text">
-         <string>Number of Unique Words</string>
+         <string>Number of Unique Words:</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QLabel" name="No_of_unique">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -198,7 +226,7 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>10</pointsize>
+          <pointsize>12</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -210,6 +238,13 @@
       </item>
       <item>
        <widget class="QLabel" name="No_of_common">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -218,7 +253,7 @@
      </layout>
     </widget>
    </widget>
-   <widget class="QPlainTextEdit" name="Essay">
+   <widget class="QPlainTextEdit" name="essay">
     <property name="geometry">
      <rect>
       <x>470</x>
