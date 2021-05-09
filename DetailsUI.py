@@ -31,3 +31,18 @@ class DetailsUI(QtWidgets.QMainWindow):
 
         self.No_of_common = self.findChild(QtWidgets.QLabel,'No_of_common')
         self.No_of_common.setText(WordDetails.GetMostCommonWords(self))
+        
+        Word = WordDetails()
+        noun_count, adj_count, verb_count, adv_count = Word.Part_of_speech()
+        
+        self.No_of_noun = self.findChild(QtWidgets.QLabel,'No_of_noun')
+        self.No_of_noun.setText(str(noun_count))
+
+        self.No_of_adj = self.findChild(QtWidgets.QLabel,'No_of_adj')
+        self.No_of_adj.setText(str(adj_count))
+
+        self.No_of_verb = self.findChild(QtWidgets.QLabel,'No_of_verb')
+        self.No_of_verb.setText(str(verb_count))
+
+        self.No_of_adverb = self.findChild(QtWidgets.QLabel,'No_of_adverb')
+        self.No_of_adverb.setText(str(adv_count))
