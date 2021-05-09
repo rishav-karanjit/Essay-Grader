@@ -6,19 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>944</width>
-    <height>600</height>
+    <width>1360</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 0, 0);
+color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>10</y>
+      <x>660</x>
+      <y>0</y>
       <width>201</width>
       <height>31</height>
      </rect>
@@ -31,6 +38,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 0, 0);</string>
+    </property>
     <property name="text">
      <string>Word Details</string>
     </property>
@@ -38,11 +48,14 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>451</width>
+      <x>20</x>
+      <y>40</y>
+      <width>681</width>
       <height>491</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 0, 0);</string>
     </property>
     <property name="title">
      <string>Word Details</string>
@@ -52,7 +65,7 @@
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>431</width>
+       <width>381</width>
        <height>71</height>
       </rect>
      </property>
@@ -62,7 +75,7 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>12</pointsize>
+          <pointsize>15</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -93,7 +106,7 @@
       <rect>
        <x>10</x>
        <y>100</y>
-       <width>431</width>
+       <width>381</width>
        <height>71</height>
       </rect>
      </property>
@@ -103,7 +116,7 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>12</pointsize>
+          <pointsize>15</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -134,7 +147,7 @@
       <rect>
        <x>10</x>
        <y>180</y>
-       <width>431</width>
+       <width>381</width>
        <height>71</height>
       </rect>
      </property>
@@ -144,7 +157,7 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>12</pointsize>
+          <pointsize>15</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -175,7 +188,7 @@
       <rect>
        <x>10</x>
        <y>260</y>
-       <width>431</width>
+       <width>381</width>
        <height>71</height>
       </rect>
      </property>
@@ -185,7 +198,7 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>12</pointsize>
+          <pointsize>15</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -216,7 +229,7 @@
       <rect>
        <x>10</x>
        <y>340</y>
-       <width>431</width>
+       <width>661</width>
        <height>141</height>
       </rect>
      </property>
@@ -226,10 +239,13 @@
         <property name="font">
          <font>
           <family>MS Sans Serif</family>
-          <pointsize>12</pointsize>
+          <pointsize>15</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(85, 0, 0);</string>
         </property>
         <property name="text">
          <string>Most common words used:</string>
@@ -245,6 +261,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(85, 0, 0);</string>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -256,12 +275,197 @@
    <widget class="QPlainTextEdit" name="essay">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>50</y>
-      <width>461</width>
+      <x>760</x>
+      <y>40</y>
+      <width>581</width>
       <height>491</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>540</y>
+      <width>1321</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Part of Speech</string>
+    </property>
+    <widget class="QWidget" name="horizontalLayoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>241</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <family>MS Sans Serif</family>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Number of Noun</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="No_of_noun">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_7">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>20</y>
+       <width>281</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_9">
+        <property name="font">
+         <font>
+          <family>MS Sans Serif</family>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Number of Adjectives</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="No_of_adj">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_8">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>20</y>
+       <width>271</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="font">
+         <font>
+          <family>MS Sans Serif</family>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Number of Verb</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="No_of_verb">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_9">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>20</y>
+       <width>291</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QLabel" name="label_11">
+        <property name="font">
+         <font>
+          <family>MS Sans Serif</family>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Number of Adverb</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="No_of_adverb">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -269,7 +473,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>944</width>
+     <width>1360</width>
      <height>21</height>
     </rect>
    </property>
