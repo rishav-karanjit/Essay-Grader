@@ -4,7 +4,7 @@ import sys
 class DetailsUI(QtWidgets.QMainWindow):
     def __init__(self):
         super(DetailsUI, self).__init__()
-        self.initUI()
+        self.initUI()     
 
     def initUI(self): 
-        uic.loadUi('./UI/Word_Details.ui', self) 
+        uic.loadUi('./UI/Word_Details.ui', self)

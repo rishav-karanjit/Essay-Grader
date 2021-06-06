@@ -1,14 +1,26 @@
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets, uic, QtCore
 import sys
+from PyQt5.QtCore import QPoint
 
 from Backend.word_details import WordDetails
+
 class DetailsUI(QtWidgets.QMainWindow):
-    def __init__(self):
+    def __init__(self,main):
+        self.main = main
         super(DetailsUI, self).__init__()
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.initUI()
+        self.show()
+        self.main.close()
 
     def initUI(self): 
-        uic.loadUi('./UI/Word_Details.ui', self) 
+        uic.loadUi('./UI/Word_Details_test.ui', self) 
+        
+        self.Close = self.findChild(QtWidgets.QPushButton, 'Close')
+        self.minimize = self.findChild(QtWidgets.QPushButton, 'minimize')
+
+        self.Close.clicked.connect(self.Close_and_Open)
+        self.minimize.clicked.connect(self.showMinimized)
         
         f = open("backend/essay.txt", "r")
         self.essay_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'essay')
@@ -46,3 +58,24 @@ class DetailsUI(QtWidgets.QMainWindow):
 
         self.No_of_adverb = self.findChild(QtWidgets.QLabel,'No_of_adverb')
         self.No_of_adverb.setText(str(adv_count))
+
+        self.start = QPoint(0, 0)
+        self.pressing = False
+
+    def mousePressEvent(self, event):
+        self.start = self.mapToGlobal(event.pos())
+        self.pressing = True
+
+    def mouseMoveEvent(self, event):
+        if self.pressing:
+            self.end = self.mapToGlobal(event.pos())
+            self.movement = self.end-self.start
+            self.setGeometry(self.mapToGlobal(self.movement).x(),
+                                self.mapToGlobal(self.movement).y(),
+                                self.width(),
+                                self.height())
+            self.start = self.end
+
+    def Close_and_Open(self):
+        self.main.show()
+        self.close()
