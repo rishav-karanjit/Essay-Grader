@@ -14,7 +14,7 @@ class DetailsUI(QtWidgets.QMainWindow):
         self.main.close()
 
     def initUI(self): 
-        uic.loadUi('./UI/Word_Details_test.ui', self) 
+        uic.loadUi('./UI/Word_Details.ui', self) 
         
         self.Close = self.findChild(QtWidgets.QPushButton, 'Close')
         self.minimize = self.findChild(QtWidgets.QPushButton, 'minimize')
