@@ -63,15 +63,18 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(101, 155, 219);
+     <string notr="true">background-color: rgb(255,255,127);
 border: 2px solid rgb(0, 0, 0);
 border-radius: 10px;</string>
+    </property>
+    <property name="plainText">
+     <string>Hi my name is...</string>
     </property>
    </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>-10</x>
+      <x>0</x>
       <y>0</y>
       <width>1211</width>
       <height>91</height>
@@ -229,7 +232,7 @@ QPushButton:hover{
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-	background-color: rgb(255, 255, 127);
+	background-color: rgb(255,229,180);
 	border: 3px solid;
 	border-color: rgb(0, 0, 0);
 	letter-spacing:2px
@@ -237,7 +240,8 @@ QPushButton:hover{
 
 QPushButton:hover{
 border-radius: 15px;
-	background-color: rgb(255, 255, 0)
+	background-color: rgb(255, 180, 172);
+
 }</string>
        </property>
        <property name="text">
@@ -275,7 +279,7 @@ border-radius: 15px;
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-	background-color: rgb(255, 255, 127);
+	background-color: rgb(255,229,180);
 	border: 3px solid;
 	border-color: rgb(0, 0, 0);
 	letter-spacing:2px
@@ -283,7 +287,7 @@ border-radius: 15px;
 
 QPushButton:hover{
 border-radius: 15px;
-	background-color: rgb(255, 255, 0)
+	background-color: rgb(255,180,172);
 }</string>
        </property>
        <property name="text">
@@ -321,7 +325,7 @@ border-radius: 15px;
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-	background-color: rgb(255, 255, 127);
+	background-color: rgb(255,229,180);
 	border: 3px solid;
 	border-color: rgb(0, 0, 0);
 	letter-spacing:2px
@@ -329,7 +333,7 @@ border-radius: 15px;
 
 QPushButton:hover{
 border-radius: 15px;
-	background-color: rgb(255, 255, 0)
+	background-color: rgb(255,180,172);
 }</string>
        </property>
        <property name="text">
@@ -367,7 +371,7 @@ border-radius: 15px;
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-	background-color: rgb(255, 255, 127);
+	background-color: rgb(255,229,180);
 	border: 3px solid;
 	border-color: rgb(0, 0, 0);
 	letter-spacing:2px
@@ -375,7 +379,7 @@ border-radius: 15px;
 
 QPushButton:hover{
 border-radius: 15px;
-	background-color: rgb(255, 255, 0)
+	background-color: rgb(255,180,172)
 }</string>
        </property>
        <property name="text">
@@ -425,9 +429,9 @@ border-radius: 15px;
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-	background-color: #0275db;
+	background-color:  hex #4169e1;
 	border: 3px solid;
-	border-color: rgb(0, 0, 0);
+	border-color: rgb(58, 84, 255);
 	letter-spacing:2px
 }
 
