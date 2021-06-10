@@ -3,6 +3,8 @@ from PyQt5 import QtWidgets, uic
 import sys
 from Backend.grammarcheck import gcheck
 from loading import Loading
+from PyQt5 import QtCore
+
 class Mistakes(QtWidgets.QMainWindow):
     def __init__(self,main):
     	self.main = main
@@ -12,6 +14,7 @@ class Mistakes(QtWidgets.QMainWindow):
 
     def initUI(self): 
         uic.loadUi('./UI/Mistakes.ui', self)
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.StartGrammerCheck()
 
         self.Close = self.findChild(QtWidgets.QPushButton, 'Close')
