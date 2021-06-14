@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>otherWindow2</class>
+ <widget class="QMainWindow" name="otherWindow2">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -233,21 +233,6 @@ QPushButton:hover{
      <string>X</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-<<<<<<< HEAD
-     <width>829</width>
-=======
-     <width>1200</width>
->>>>>>> edfecd7f9e2276e23e7f6a0421cfd95115d646b3
-     <height>21</height>
-    </rect>
-   </property>
   </widget>
  </widget>
  <resources/>

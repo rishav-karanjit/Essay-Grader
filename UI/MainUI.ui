@@ -68,7 +68,7 @@ border: 2px solid rgb(0, 0, 0);
 border-radius: 10px;</string>
     </property>
     <property name="plainText">
-     <string>Hi my name is...</string>
+     <string/>
     </property>
    </widget>
    <widget class="QFrame" name="frame">
