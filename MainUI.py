@@ -7,6 +7,8 @@ from DetailsUI import DetailsUI
 from Grammer_checkUI import Mistakes
 from Essay_reportUI import Essay_report
 from EssayScoreUI import Score
+from Scores import ScoreUI
+
 
 class MainUI(QtWidgets.QMainWindow):
     def __init__(self):
@@ -28,8 +30,8 @@ class MainUI(QtWidgets.QMainWindow):
         #button connect
         self.essay_details.clicked.connect(self.Disp_essay_details)
         self.grammer_check.clicked.connect(self.Disp_grammer_check)
-        # self.essay_score.clicked.connect(self.Disp_essay_score)
-        # self.essay_report.clicked.connect(self.Disp_essay_report)
+        self.essay_score.clicked.connect(self.Disp_essay_score)
+        self.essay_report.clicked.connect(self.Disp_essay_report)
         self.Save_essay.clicked.connect(self.Disp_Save_essay)
         self.Close.clicked.connect(sys.exit)
         self.minimize.clicked.connect(self.showMinimized)
@@ -64,7 +66,13 @@ class MainUI(QtWidgets.QMainWindow):
     def Disp_Save_essay(self):     
         Essay = self.plainTextEdit.toPlainText()
         with open('./Backend/essay.txt', 'w') as f:
-            f.write(Essay)  
+            f.write(Essay) 
+    
+    def Disp_essay_score(self):
+        self.window = ScoreUI(self)
+
+    def Disp_essay_report(self):
+        self.window = Essay_report()
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
