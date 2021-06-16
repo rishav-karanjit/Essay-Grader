@@ -41,13 +41,13 @@
       <x>0</x>
       <y>0</y>
       <width>1201</width>
-      <height>71</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Microsoft YaHei UI</family>
-      <pointsize>16</pointsize>
+      <family>Consolas</family>
+      <pointsize>20</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -56,50 +56,16 @@
      <string notr="true">background-color:#778899</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Grammatical Mistake&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="gmistake">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>140</y>
-      <width>441</width>
-      <height>511</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe Print</family>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255,255,127);
-
-border: 2px solid rgb(0, 0, 0);
-border-radius: 10px;</string>
-    </property>
-    <property name="plainText">
-     <string>...
-
-
-</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Grammatical Mistake&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="essay">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>20</x>
       <y>140</y>
-      <width>401</width>
-      <height>511</height>
+      <width>591</width>
+      <height>551</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -121,15 +87,48 @@ border: 2px solid rgb(0, 0, 0);
 border-radius: 10px;</string>
     </property>
     <property name="plainText">
-     <string>...
+     <string>
+
+
 </string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="gmistake">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>140</y>
+      <width>541</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Print</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255,255,127);
+
+border: 2px solid rgb(0, 0, 0);
+border-radius: 10px;</string>
+    </property>
+    <property name="plainText">
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>80</y>
+      <x>640</x>
+      <y>100</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -146,8 +145,8 @@ border-radius: 10px;</string>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>80</y>
+      <x>10</x>
+      <y>100</y>
       <width>111</width>
       <height>31</height>
      </rect>
