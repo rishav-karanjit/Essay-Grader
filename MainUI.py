@@ -5,8 +5,7 @@ from PyQt5.QtCore import QPoint
 
 from DetailsUI import DetailsUI
 from Grammer_checkUI import Mistakes
-from Essay_reportUI import Essay_report
-from EssayScoreUI import Score
+
 from Scores import ScoreUI
 
 
