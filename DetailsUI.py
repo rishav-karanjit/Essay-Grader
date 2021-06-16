@@ -13,7 +13,7 @@ class DetailsUI(QtWidgets.QMainWindow):
         self.show()
         self.main.close()
 
-    def initUI(self): 
+    def initUI(self):
         uic.loadUi('./UI/Word_Details.ui', self) 
         
         self.Close = self.findChild(QtWidgets.QPushButton, 'Close')
