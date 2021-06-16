@@ -9,6 +9,6 @@ class ScoreUI(QtWidgets.QMainWindow):
         self.show()
 
     def initUI(self): 
-        uic.loadUi('./UI/Score.ui', self)
+        uic.loadUi('./UI/Score_2.ui', self)
         score = self.load_model.Load_StackModel()
         self.findChild(QtWidgets.QLabel, 'Score').setText(str(score[0]))
