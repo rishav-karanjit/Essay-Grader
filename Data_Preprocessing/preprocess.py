@@ -16,8 +16,6 @@ Words = Words()
 Unique_words = Unique_words()
 POS = POS()
 for i in range(len(df)) :
-	df.loc[i,"Grammer mistakes"] = grammer_check.check(df.loc[i,"essay"])
-	print(df.loc[i,"Grammer mistakes"])
 	df.loc[i, "No. of Characters"] = Characters.Get_No_of_char(df.loc[i,"essay"])
 	df.loc[i,"No. of Words"] = Words.Get_words(df.loc[i,"essay"])
 	df.loc[i,"No. of Paragraphs"] = 1
