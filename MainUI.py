@@ -8,6 +8,8 @@ from Grammer_checkUI import Mistakes
 
 from Scores import ScoreUI
 
+import pandas as pd
+
 
 class MainUI(QtWidgets.QMainWindow):
     def __init__(self):
@@ -64,6 +66,11 @@ class MainUI(QtWidgets.QMainWindow):
 
     def Disp_Save_essay(self):     
         Essay = self.plainTextEdit.toPlainText()
+
+        df = pd.read_csv("Backend/essay.csv")
+        df.loc[0,"Essay"] = Essay
+        df.to_csv("Backend/essay.csv",index=False)
+
         with open('./Backend/essay.txt', 'w') as f:
             f.write(Essay) 
     

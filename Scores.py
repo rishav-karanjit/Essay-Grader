@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets, uic
 import sys
 from Model.Loadmodel import Load_model
 from PyQt5 import QtWidgets, uic, QtCore
+import pandas as pd
 
 class ScoreUI(QtWidgets.QMainWindow):
 	def __init__(self,main):
@@ -19,6 +20,11 @@ class ScoreUI(QtWidgets.QMainWindow):
 
 		score = self.load_model.Load_StackModel()
 		self.findChild(QtWidgets.QLabel, 'Score').setText(str(score[0]))
+
+		df = pd.read_csv("Backend/essay.csv")
+		df.loc[0,"Score"] = score[0]
+		df.to_csv("Backend/essay.csv",index=False)
+
 		self.Close = self.findChild(QtWidgets.QPushButton, 'Close')
 		self.minimize = self.findChild(QtWidgets.QPushButton, 'minimize')
 		self.Close.clicked.connect(self.Close_and_Open)

@@ -1,2 +1,2 @@
-Number of Char,No. of words,No. of unique,POS SUM,Noun,Adjectives,Verb,Adverb,Grammer Mistakes
-9,2,8,2,2.0,0.0,0.0,0.0,2.0
+Number of Char,No. of words,No. of unique,POS SUM,Noun,Adjectives,Verb,Adverb,Grammer Mistakes,Score,Essay
+8,2,7,1,0,0,1,0,1,1.0,write the
