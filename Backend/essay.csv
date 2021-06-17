@@ -1,2 +1,2 @@
-Number of Char,No. of words,No. of unique,POS
-2617,506,44,314.0
+Number of Char,No. of words,No. of unique,POS SUM,Noun,Adjectives,Verb,Adverb,Grammer Mistakes
+9,2,8,2,2.0,0.0,0.0,0.0,2.0

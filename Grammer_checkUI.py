@@ -4,6 +4,7 @@ import sys
 from Backend.grammarcheck import gcheck
 from loading import Loading
 from PyQt5 import QtCore
+import time
 
 class Mistakes(QtWidgets.QMainWindow):
     def __init__(self,main):
@@ -23,18 +24,22 @@ class Mistakes(QtWidgets.QMainWindow):
         self.Close.clicked.connect(self.Close_and_Open)
         self.minimize.clicked.connect(self.showMinimized)
 
-        f = open("backend/grammer_mistake.txt", "r")
+        self.start = QPoint(0, 0)
+        self.pressing = False
+
         self.gmistake_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'gmistake')
         self.gmistake_textedit.setReadOnly(True)
+        
+        self.essay_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'essay')
+        self.essay_textedit.setReadOnly(True)
+
+        time.sleep(3)
+
+        f = open("backend/grammer_mistake.txt", "r")
         self.gmistake_textedit.insertPlainText(f.read())
 
         f = open("backend/essay.txt", "r")
-        self.essay_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'essay')
-        self.essay_textedit.setReadOnly(True)
         self.essay_textedit.insertPlainText(f.read())
-
-        self.start = QPoint(0, 0)
-        self.pressing = False
 
     def mousePressEvent(self, event):
         self.start = self.mapToGlobal(event.pos())

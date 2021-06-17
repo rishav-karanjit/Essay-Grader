@@ -121,7 +121,12 @@ class WordDetails():
 				elif pos_tag.startswith('R'):
 					adv_count += 1
 
-		df.loc[0,"POS"] = (noun_count+adj_count+verb_count+adv_count)
+		df.loc[0,"Noun"] = noun_count
+		df.loc[0,"Adjectives"] = adj_count
+		df.loc[0,"Verb"] = verb_count
+		df.loc[0,"Adverb"] = adv_count
+
+		df.loc[0,"POS SUM"] = (noun_count+adj_count+verb_count+adv_count)
 		df.to_csv("Backend/essay.csv",index=False)
 
 		return noun_count, adj_count, verb_count, adv_count

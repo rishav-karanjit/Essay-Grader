@@ -1,5 +1,6 @@
 import language_tool_python
 import os
+import pandas as pd
 
 class gcheck():
     def Check_Grammer(self):
@@ -12,6 +13,11 @@ class gcheck():
         # get the matches
         matches = tool.check(text)
         fw.write("No. of grammatical mistake:"+str(len(matches))+"\n\n")
+
+        df = pd.read_csv("Backend/essay.csv")
+        df.loc[0,"Grammer Mistakes"] = len(matches)
+        df.to_csv("Backend/essay.csv",index=False)
+
         fw.write("------------------------------------------\n")
         translation_table = dict.fromkeys(map(ord, '^'), None)
 
