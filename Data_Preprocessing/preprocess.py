@@ -15,7 +15,7 @@ Words = Words()
 #Paragraph = Paragraph()
 Unique_words = Unique_words()
 POS = POS()
-for i in range(len(df)) :
+for i in range(3609,len(df)) :
 	df.loc[i, "No. of Characters"] = Characters.Get_No_of_char(df.loc[i,"essay"])
 	df.loc[i,"No. of Words"] = Words.Get_words(df.loc[i,"essay"])
 	df.loc[i,"No. of Paragraphs"] = 1

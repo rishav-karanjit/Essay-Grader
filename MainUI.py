@@ -9,7 +9,7 @@ from Grammer_checkUI import Mistakes
 from Scores import ScoreUI
 
 import pandas as pd
-
+import webbrowser
 
 class MainUI(QtWidgets.QMainWindow):
     def __init__(self):
@@ -78,7 +78,47 @@ class MainUI(QtWidgets.QMainWindow):
         self.window = ScoreUI(self)
 
     def Disp_essay_report(self):
-        self.window = Essay_report()
+    	content = '''
+    	<html>
+    	<head>
+    	<link rel="stylesheet" href="report.css">
+    	</head>
+    	<body>
+    	Essay:<br>{essay}<br>
+    	<br><br>
+    	Number of Character: {NumberofChar}<br>
+    	No. of words: {No_of_words} <br>
+    	No. of unique: {No_of_unique}<br>
+    	Noun: {Noun}<br>
+    	Adjectives: {Adjectives}<br>
+    	Verb: {Verb}<br>
+    	Adverb: {Adverb}<br>
+    	Grammer Mistakes: {GrammerMistakes}<br>
+    	Score: {Score}<br>
+    	</body>
+    	</html>
+
+    	'''
+
+    	df = pd.read_csv("Backend/essay.csv")
+    	essay = df.loc[0,"Essay"]
+    	NumberofChar = df.loc[0,"Number of Char"]
+    	No_of_words = df.loc[0,"No. of words"]
+    	No_of_unique = df.loc[0,"No. of unique"]
+    	Noun = df.loc[0,"Noun"]
+    	Adjectives = df.loc[0,"Adjectives"]
+    	Verb = df.loc[0,"Verb"]
+    	Adverb = df.loc[0,"Adverb"]
+    	GrammerMistakes = df.loc[0,"Grammer Mistakes"]
+    	Score = df.loc[0,"Score"]
+
+    	htmlcontent = content.format(**locals())
+
+    	outfile = open('test.html','w')
+    	outfile.write(htmlcontent)
+    	outfile.close()
+
+    	webbrowser.open("test.html")
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

@@ -17,7 +17,6 @@ class Mistakes(QtWidgets.QMainWindow):
         uic.loadUi('./UI/Mistakes.ui', self)
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.StartGrammerCheck()
-
         self.Close = self.findChild(QtWidgets.QPushButton, 'Close')
         self.minimize = self.findChild(QtWidgets.QPushButton, 'minimize')
 
@@ -27,19 +26,18 @@ class Mistakes(QtWidgets.QMainWindow):
         self.start = QPoint(0, 0)
         self.pressing = False
 
-        self.gmistake_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'gmistake')
-        self.gmistake_textedit.setReadOnly(True)
+        # self.gmistake_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'gmistake')
+        # self.gmistake_textedit.setReadOnly(True)
         
-        self.essay_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'essay')
-        self.essay_textedit.setReadOnly(True)
+        # self.essay_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'essay')
+        # self.essay_textedit.setReadOnly(True)
 
-        time.sleep(3)
+        # # f = open("backend/grammer_mistake.txt", "r")
+        # self.gmistake_textedit.insertPlainText(fg.read())
+        # # f.close()
 
-        f = open("backend/grammer_mistake.txt", "r")
-        self.gmistake_textedit.insertPlainText(f.read())
-
-        f = open("backend/essay.txt", "r")
-        self.essay_textedit.insertPlainText(f.read())
+        # f = open("backend/essay.txt", "r")
+        # self.essay_textedit.insertPlainText(f.read())
 
     def mousePressEvent(self, event):
         self.start = self.mapToGlobal(event.pos())
@@ -74,12 +72,34 @@ class Mistakes(QtWidgets.QMainWindow):
         self.thread.start()
         
         # # Final resets
+        # self.thread.finished.connect(
+        #     fg = open("backend/grammer_mistake.txt", "r")       
+        # )
         self.thread.finished.connect(
-            lambda: self.show()         
+            lambda: self.After_thread()         
         )
         self.thread.finished.connect(
+            
+            # fe = open("backend/essay.txt", "r")
             lambda: self.window2.close()
         )
+
+    def After_thread(self):
+
+        self.gmistake_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'gmistake')
+        self.gmistake_textedit.setReadOnly(True)
+        
+        self.essay_textedit = self.findChild(QtWidgets.QPlainTextEdit, 'essay')
+        self.essay_textedit.setReadOnly(True)
+        
+        fg = open("backend/grammer_mistake.txt", "r")
+        self.gmistake_textedit.insertPlainText(fg.read())
+        # f.close()
+
+        f = open("backend/essay.txt", "r")
+        self.essay_textedit.insertPlainText(f.read())
+
+        self.show()
 
     def Close_and_Open(self):
         self.main.show()
