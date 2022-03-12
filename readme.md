@@ -10,6 +10,7 @@
   
 </h2>
 
+Grades the essay using Ensemble learning algorithm which combines random forest algorithm, KNN, SVM, Logistic regression and XG Boost algorithm.
 ### Features
 
 - Give Essay details like words, characters, unique words, grammatical mistakes, speech of essay.
